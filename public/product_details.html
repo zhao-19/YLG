@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/product_details.css">
+  <script src="js/vue.js"></script>
+</head>
+<body>
+    <header id="header" class="container">
+    </header>
+    <main id="main" class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb small bg-transparent">
+          <li class="breadcrumb-item"><a class="text-dark font-weight-bold small" href="#">首页</a></li>
+          <li class="breadcrumb-item"><a class="text-dark font-weight-bold small" href="#">羽绒服</a></li>
+          <li class="breadcrumb-item text-dark font-weight-bold small active" aria-current="page">复古羽绒服</li>
+        </ol>
+      </nav>
+      <div class="container mb-5">
+        <div class="row pr-3">
+          <div id="preview" class="col pr-0">
+            <div class="card bg-transparent mr-5 position-absolute">
+              <img class="card-img-top" src="img/product/L/banner1lg.jpg" alt="Card image cap">
+              <div id="mask" class="position-absolute d-none"></div>
+              <div id="super-mask" class="position-absolute"></div>
+              <div id="div-lg" class="position-absolute d-none"></div>
+              <div class="card-body p-0 text-center">
+                <img src="img/product_detail/hover-prev.png" class="btn float-left btn-light border-0 p-1 pt-4 pb-4 disabled">
+                <div class="d-inline-block pt-2 mx-0 m-auto">
+                  <ul class="list-unstyled mb-0">
+                  </ul>
+                </div>
+                <img src="img/product_detail/hover-next.png" class="btn float-right btn-light border-0 p-1 pt-4 pb-4">
+              </div>
+            </div>
+          </div>
+          <div id="details" class="col pl-0">
+            <h6 class="font-weight-bold">{{product.title}}</h6>
+            <h6>
+              <a class="small text-dark font-weight-bold" href="javascript:;">{{product.subtitle}}</a>
+            </h6>
+            <div class="alert alert-secondary small" role="alert">
+              <div>
+                <span>优惠价：</span>
+                <h2 class="d-inline text-primary font-weight-bold">¥{{product.price.toFixed(2)}}</h2>
+              </div>
+              <div>
+                <span>原价：</span>
+                <span>{{product.promise}}</span>
+              </div>
+            </div>
+            <!-- 客服 -->
+            <p class="mb-1">
+              <span class="small">客服：</span>
+              <span class="small">联系客服</span>
+              <img class="mb-3" src="img/product_detail/kefuf.gif">
+            </p>
+            <!-- 规格 -->
+            <div>
+              <div class="float-left small">规格：</div>
+              <div class="float-left w-75">
+                <a v-for="spec in specs" class="btn btn-sm btn-outline-secondary" :class="spec.lid==lid?'active':''" :href="`product_details.html?lid=${spec.lid}`">{{spec.spec}}</a>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- 数量 -->
+            <div class="mt-2">
+              <div class="float-left small">数量：</div>
+              <div class="input-group mb-3 w-25">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-secondary p-1" type="button">-</button>
+                </div>
+                <input type="text" value="1" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary p-1" type="button">+</button>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <!-- 购买部分 -->
+            <div>
+              <a class="btn pt-3 pb-2 pl-5 pr-5" href="javascript:;"><h5>立即购买</h5></a>
+              <a class="btn btn-primary pt-3" href="javascript:;">
+                <h5><img src="img/product_detail/product_detail_img7.png" alt=""> 加入购物车</h5>
+              </a>
+              <a class="btn btn-primary pt-1 pb-1" href="javascript:;" class="collection">
+                <img src="img/product_detail/product_detail_img6.png">
+                <br>
+                收藏
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar flex-md-nowrap p-0 ml-3">
+        <form class="form-inline pl-2">
+          <button class="btn bg-transparent rounded-0 pt-3 pb-2 active" type="button"><h5>商品详情</h5></button>
+          <button class="btn bg-transparent rounded-0 pt-3 pb-2" type="button"><h5>商品评价</h5></button>
+        </form>
+        <ul class="navbar-nav">
+          <li class="nav-item text-nowrap">
+            <a class="btn btn-primary p-3 border-bottom" href="javascript:;">
+              <h5><img src="img/product_detail/product_detail_img7.png" alt=""> 加入购物车</h5>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div id="params" class="container">
+        <div class="row mr-1">
+          <div class="col-md-10 pt-5">
+            <div> 
+              <div>   
+                <div style="text-align: center">
+                  <img alt="" class="" src="img/product_detail/01.jpg">
+                </div>  
+              </div>
+              <div>
+                <div style="text-align: center">
+                  <img alt="" class="" src="img/product_detail/1.jpg">
+                </div>  
+              </div>
+              <div>
+                <div style="text-align: center">
+                  <img alt="" class="" src="img/product_detail/2.jpg">
+                </div>
+              </div>
+              <div>
+                <div style="text-align: center">
+                  <img alt="" class="" src="img/product_detail/3.jpg">
+                </div>
+              </div>
+              <div>
+                <div style="text-align: center">
+                  <img alt="" class="" src="img/product_detail/01.jpg">
+                </div>
+              </div>
+              <div>
+                <div style="text-align: center">
+                  <img alt="" class="" src="img/product_detail/4.jpg">
+                </div>
+              </div>
+              <div>
+                <div style="text-align: center">
+                  <img alt="" class="" src="img/product_detail/5.jpg">
+                </div>
+              </div>
+              <div>
+                <div style="text-align: center">
+                  <img alt="" class="" src="img/product_detail/6.jpg">
+                </div>
+              </div>
+              <div>   
+                <div class="pl-3 small">技术规格请前往天猫查看完整内容。</div>
+              </div>
+            </div>
+            <a name="售后保障"></a>
+            <h6 class="d-inline-block mt-4 mb-3 ml-3">售后保障 <img src="img/product_detail/product_detail_icon_3.png" alt=""></h6>
+            <div class="pl-3"> 
+              <div>
+                <p class="text-primary font-weight-bold">
+                  <img src="img/product_detail/product_detail_img16.png" alt="">
+                  正品保障
+                </p>
+                <p class="small">
+                  易乐购商城向您保证所售商品均为正品行货。
+                </p>
+                <p class="text-primary font-weight-bold">
+                  <img src="img/product_detail/product_detail_img16.png" alt="">
+                  全国联保
+                </p>
+                <p class="small">
+                  易乐购商城出品，必属于正品。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container">
+    </footer>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/details.js"></script>
+</body>
+</html>

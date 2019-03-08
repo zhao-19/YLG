@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录商城</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        #container{
+            width:1000px;
+            height:560px;
+            background:url(img/register/bg.png) no-repeat;
+            margin:0 auto;
+        }
+        #footer,#header{
+            width:1000px;
+            height:150px;
+            margin:0 auto;
+        }
+        #container div.black{
+            width:280px;
+            height:400px;
+            background:rgba(0,0,0,.3);
+            margin:130px 0 0 600px;
+        }
+        #container div.black table{
+            width:100%;
+        }
+        #container h4{
+            color:#fff;
+            margin:0;
+        }
+        #container a{
+            color:#fff;
+            text-decoration:none;
+            font-size:12px;
+        }
+        input.uname,input.upwd{
+            width:100%;
+            height:34px;
+            border:none;
+            outline:0;
+            padding-left:15px;
+            margin-bottom:30px;
+            box-sizing:border-box;
+            background:#fff url(img/register/yhm.png) no-repeat 97% center;
+        }
+        input.upwd{
+            background-image:url(img/register/mm.png);
+        }
+        input.login{
+            width:100%;
+            height:36px;
+            margin-top:20px;
+        }
+        td.autoLogin{
+            color:#fff;
+            font-size:12px;
+        }
+        header{
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+<header id="header" class="container mb-4">
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="index.html">
+            <img id="logo" src="img/header/logo.png" width="168" height="41" alt="">
+        </a>
+        <div class="form-inline">
+            <div class="input-group">
+                <input type="text" class="form-control p-0" placeholder="请输入服装关键词" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append h-75">
+                    <img class="btn p-0" src="img/header/search.png">
+                </div>
+            </div>
+        </div>
+        <nav id="signout" class="my-2 my-md-0 mr-md-3 small">
+            <a class="p-1 text-muted" href="register.html">注册</a>
+            <b class="p-1 text-muted" >|</b>
+            <a class="p-1 text-muted" id="btnLogin" href="login.html">登录</a>
+        </nav>
+    </nav>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link text-muted active" href="index.html">首页</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-muted" href="#">学习用品</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-muted" href="#">私人定制</a>
+        </li>
+    </ul>
+</header>
+<main id="main" class="container" align="center">
+    <div id="container">
+        <table></table>
+        <div class="black">
+            <table>
+                <tr>
+                    <td>
+                        <h4>新用户注册</h4>
+                    </td>
+                    <td>
+                        <a href="#">登录易乐购商城</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><hr></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" placeholder="请输入您的用户名" class="uname" name="uname">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="password" placeholder="请输入您的密码" class="upwd" name="upwd">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="tel" placeholder="请输入您的电话" class="upwd" name="upwd">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <select id="gender">
+                            <option value="1">男</option>
+                            <option value="0">女</option>
+                            <option value="2">保密</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="autoLogin">
+                        <input type="checkbox">自动登录
+                    </td>
+                    <td>
+                        <a href="#">忘记密码？</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="注册" class="login">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</main>
+<footer id="footer" class="bg-white pt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <p>
+                <img src="img/footer/logo.png">
+            </p>
+            <p>
+                <img src="img/footer/footerFont.png">
+            </p>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-4 col-md">
+                    <h6>买家帮助</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted small" href="#">新手指南</a></li>
+                        <li><a class="text-muted small" href="#">服务保障</a></li>
+                        <li><a class="text-muted small" href="#">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md">
+                    <h6>商家帮助</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted small" href="#">商家入驻</a></li>
+                        <li><a class="text-muted small" href="#">商家后台</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md">
+                    <h6>关于我们</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted small" href="#">关于易乐购</a></li>
+                        <li><a class="text-muted small" href="#">联系我们</a></li>
+                        <li><a class="text-muted" href="#">
+                            <img src="img/footer/wechat.png">
+                            <img src="img/footer/sinablog.png">
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-6 col-md pl-5 pr-0">
+                    <h6>易乐购商城</h6>
+                    <p>
+                        <img src="img/footer/ios.png">
+                    </p>
+                    <p>
+                        <img src="img/footer/android.png">
+                    </p>
+                </div>
+                <div class="col-6 col-md pl-4 pr-0">
+                    <img src="img/footer/erweima.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light justify-content-center text-muted small">
+        &copy;易乐购商城有限公司 版权所有 川ICP证23453245号
+    </nav>
+</footer>
+<script src="js/common.js"></script>
+<script>
+    var isRegister = false;//全局变量，控制注册按钮
+    //异步请求：检查用户名称是否存在
+    function checkUname() {
+        var xhr = createXhr();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var res = xhr.responseText;
+                if (res == "1") {
+
+                    $("showUname").innerHTML = "用户名已存在";
+                    isRegister = false;
+                } else {
+                    $("showUname").innerHTML = "用户名可用";
+                    isRegister = true;
+                }
+            }
+        }
+        var uname = $('uname').value;
+        xhr.open("get", "/myPro/selectUname?" + 'uname=' + uname, true);
+        xhr.send(null);
+    }
+
+    //异步注册
+    function register() {
+        if (isRegister == true) {
+            //1.创建xhr异步请求
+            var xhr = createXhr();
+            //2.监听异步请求
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var res = xhr.responseText;
+                    alert(res);
+                }
+            }
+            //3.
+            xhr.open("post", "/myPro/register", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            var uname = $("uname").value;
+            var upwd = $("upwd").value;
+            var email = $("email").value;
+            var phone = $("phone").value;
+            var user_name = $("user_name").value;
+            var gender = $("gender").value;
+            var msg = "uname=" + uname + "&upwd=" + upwd + "&email=" + email + "&phone=" + phone + "&user_name=" + user_name + "&gender=" + gender;
+            //4.
+            xhr.send(msg);
+        } else {
+            alert("请检查注册信息");
+        }
+    }
+
+</script>
+
+</body>
+</html>

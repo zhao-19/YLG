@@ -1,0 +1,27 @@
+/*定制每层楼中每张商品图片的大小位置*/
+
+#main>div:nth-child(3)>h3>div>div>a{
+  text-decoration: none;
+  margin:0 auto;
+  color:#a3a3a3;
+}
+#main>div:nth-child(3)>h3>div:nth-child(2)>div>img{
+  margin:0 auto;
+  height: 350px;
+}
+
+/*定制每张商品卡片的背景色*/
+#main>div:nth-child(3)>h3 .card{
+  background-color:#ffffff;
+  margin: 0;
+  padding: 0;
+}
+/*定制电梯按钮的样式*/
+#main>.btn-group-vertical{
+  top:100px;
+  left:10px;
+}
+#main>.btn-group-vertical>.btn-secondary:hover {
+  background-color: #e4393c;
+  border-color: #e4393c;
+}
